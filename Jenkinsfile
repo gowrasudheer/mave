@@ -1,12 +1,20 @@
-pipeline{
+pipeline {
 	agent any
-	stages{
-	stage('compilestage'){
-	steps{
-	withmaven(maven : maven){
-	sh 'mvn compile'
-	}
-     }
+	
+		stages {
+			stage ('compile stage') {
+				steps {
+					withmaven (maven : 'maven') { 
+						sh 'mvn clean compile'
+
+
+				
+
+
+
+
+}
+}
 }
 }
 }
